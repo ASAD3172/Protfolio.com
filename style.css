@@ -1,253 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-*{
-    font-family: "Poppins", sans-serif;
-    /* border: .1rem solid white; */
+/* Custom styles for Fantasy Land Amusement Park */
+body {
+    background-color: #fff;
+    color: #000;
+}
+.navbar .navbar-nav .nav-item{
+    transition: all 0.3s ease-in-out;
+}
+.navbar .navbar-nav .nav-item:hover{
+    color: #000;
+    transform: translateY(-3px);
+}
+.home-banner{
+    background-image: url(../images/slider-image.jpg);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner .container{
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 20px;
+    margin-top: 150px;
 }
 
-:root{
-    --green-clr:#DFFE02;
-    --gray-clr:#898989;
-    --dark-blue-clr:#171C22;
+.gallery-banner{
+    background-image: url(../images/gallery-banner.jpg);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.bg-green{
-    background: var(--green-clr);
+.about-banner{
+    background-image: url(../images/aboutus-banner.png);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.bg-dark-blue{
-    background: var(--dark-blue-clr);
+.contact-banner{
+    background-image: url(../images/contactus-banner.jpg);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.txt-green{
-    color: var(--green-clr);
+.restaurant-banner{
+    background-image: url(../images/restaurant-banner.jpg);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.txt-gray{
-    color: var(--gray-clr);
+.entertainment-banner{
+    background-image: url(../images/entertainment-banner.jpg);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-li{
-    list-style: none;
+.ticket-banner{
+    background-image: url(../images/tickets-banner.jpg);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-a{
-    text-decoration: none;
+.card-custom {
+    background-color: #f0efef;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-custom > img{
+    width: 100%;
+    height: 150px;
+}
+.restaurant .card-custom > img{
+    width: 100%;
+    height: 230px;
+}
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-
-img{
-    max-width: 100%;
-    height: auto;
+.btn-black-custom {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.navbar-logo{
-    width: 8.5rem;
+.btn-black-custom:hover {
+    background-color: #fff;
+    color: #000;
 }
 
-.mybtn{
-    border: .1rem solid var(--green-clr)!important;
-    padding: .5rem 1.6rem;
-}
-.mybtn:hover{
-    background: transparent;
-    color: var(--green-clr)!important;
+.nav-link:hover, .navbar-brand:hover {
+    color: #000 !important;
 }
 
-.navbar-toggler-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
- width: 2.2rem;
-}
-
-.image-container{
-    width: 32rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border-top: 1rem solid white;
-    border-bottom: 1rem solid white;
-    background-image: url(images/profile.png);
+/* Parallax effect for home page hero section */
+.parallax-bg {
+    background-image: url('https://placehold.co/1920x1080/4F46E5/ffffff?text=.');
+    background-attachment: fixed;
     background-position: center;
-    background-size: 115%;
-    box-shadow: 0 0 1rem white,inset 0 0 1rem white, 
-    0 0 2rem var(--green-clr), 
-    inset 0 0 2rem var(--green-clr),
-    0 0 7rem var(--green-clr),
-    inset 0 0 4rem var(--green-clr);
-    
-}
-
-.hero-section{
-    min-height: 85vh;
-}
-
-h1{
-    font-size: 4rem;
-    font-family: "Merriweather Sans", sans-serif;
-}
-P{
-    font-size: .95rem;
-}
-
-.para{
-    max-width: 500px;
-}
-
-
-.main-txt{
-    letter-spacing: .2rem;
-    font-size: .8rem;
-}
-
-.about-me{
-    width: 35rem;
-    margin: 0 auto;
-}
-.section-container{
-    padding-block: 4rem;
-}
-
-.glow{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
     position: relative;
-}
-
-.glow::before{
-    content: "";
-    background: var(--green-clr);
-    position: absolute;
-    inset: 4rem;
-    border-radius: 50%;
-    z-index: -1;
-    filter: blur(70px);
-}
-
-.hover-card:hover{
-  background: var(--green-clr);
-}
-
-.hover-card:hover *{
-    color: black !important;
-}
-
-.mycard{
-    width: 21rem;
-     transition: transform .5s ease-in-out;
-}
-.mycard:hover{
-    transform: scale(1.1);
-}
-
-.blog-card{
-    width: 24rem;
-}
-
-.form{
-    width: 35rem;
-    
-}
-/* 
-.form-control{
-    border: .1rem solid var(--gray-clr);
-}
-
-.form-control:focus{
-    box-shadow: none;
-    border: .1rem solid var(--gray-clr);
-}
-
-#floatingTextarea{
-    resize: none;
-    height: 22vh;
-} */
-
-
-
-
-.line{
-    background: rgba(255, 255, 255, 0.24);
-    height: .1rem;
-    width: 100%;
-}
-
-.profile{
-    width: 3rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.profile img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.prev,.next{
-    font-size: 1.2rem;
-    padding: .5rem .6rem;
-    border-radius: 50%;
-}
-
-
-
-.scroll-up {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #05040471;
-    color: #000000;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 24px;
-    box-shadow: 0 0 10px #7cf03d;
-    transition: 0.3s;
-    z-index: 200;
-    text-decoration: none;
-   
+    justify-content: center;
+    text-align: center;
 }
 
-.scroll-up {
-    animation: bounce 2s infinite;
+.parallax-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
 }
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-8px); }
-    60% { transform: translateY(-4px); }
-}
-
-.scroll-up:hover {
-    background: transparent;
-    color: #7cf03d;
-    border: 2px solid #7cf03d;
-    box-shadow: none;
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 680px){
-    h1{
-        font-size: 2.8rem;
-    }
-    .image-container{
-        width: 20rem;
-    }
-    .hero-section{
-        min-height: 72vh;
-    }
-    .about-me{
-         width: 23rem;
-    }
-    form{
-        width: 25rem;
-    }
-}
-
